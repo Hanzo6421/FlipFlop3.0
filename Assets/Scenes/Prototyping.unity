@@ -1317,7 +1317,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22585277, y: 0.37107247, z: -0.093551286, w: 0.89584816}
-  m_LocalPosition: {x: -21.200836, y: 11.932204, z: -15.564787}
+  m_LocalPosition: {x: -21.200836, y: 12.959205, z: -15.564787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1446,7 +1446,7 @@ Transform:
   m_GameObject: {fileID: 368554473}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22585277, y: 0.37107247, z: -0.093551286, w: 0.89584816}
-  m_LocalPosition: {x: -21.200836, y: 11.932204, z: -15.564787}
+  m_LocalPosition: {x: -21.200836, y: 12.959205, z: -15.564787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7248,7 +7248,6 @@ GameObject:
   - component: {fileID: 1430494312}
   - component: {fileID: 1430494311}
   - component: {fileID: 1430494310}
-  - component: {fileID: 1430494315}
   - component: {fileID: 1430494316}
   m_Layer: 0
   m_Name: Player
@@ -7319,7 +7318,7 @@ Transform:
   m_GameObject: {fileID: 1430494303}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.38268277, z: 0, w: 0.92387986}
-  m_LocalPosition: {x: -5.6360474, y: 0.07999992, z: -19.28}
+  m_LocalPosition: {x: -5.6360474, y: 1.107, z: -19.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7559,7 +7558,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1430494314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7601,33 +7600,6 @@ MonoBehaviour:
   minFallDamage: 10
   maxFallDamage: 75
   health: {fileID: 0}
---- !u!54 &1430494315
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430494303}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &1430494316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7641,7 +7613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider2D: {fileID: 0}
-  rb: {fileID: 1430494315}
+  rb: {fileID: 0}
   forceUp: 10
 --- !u!1 &1438210774
 GameObject:

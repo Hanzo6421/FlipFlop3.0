@@ -94,6 +94,12 @@ namespace FlipFlop.Gameplay
                         isPerspective = false;
                         isOrthographic = true;
                         isTransitioning = false;
+                        
+                        // Function here
+                            //Physics.Raycast(-Vector.up, transform.position + (0,20,0), 25)
+                            {
+                                //Move character to hit position
+                            }
                     }
                     else
                     {

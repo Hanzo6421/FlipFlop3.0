@@ -150,7 +150,7 @@ namespace FlipFlop.Gameplay
             
             // Force the crouch state to false when starting
             SetCrouchState(false, true);
-            UpdateCharacterHeight(true);
+            //UpdateCharacterHeight(true);
         }
 
         private void OnEnable()
@@ -217,7 +217,7 @@ namespace FlipFlop.Gameplay
                 SetCrouchState(!isCrouching, false);
             }
 
-            UpdateCharacterHeight(false);
+            //UpdateCharacterHeight(false);
             
             HandleCharacterMovement();
         }
@@ -277,7 +277,9 @@ namespace FlipFlop.Gameplay
             float horizontalMoveInput = moveInput.x;
             float verticalMoveInput = moveInput.y;
 
-            Vector3 worldSpaceMoveInput = (cameraRight * horizontalMoveInput + cameraForward * verticalMoveInput).normalized;
+            var cameraInput = (cameraRight * horizontalMoveInput + cameraForward * verticalMoveInput);
+            cameraInput.y = 0;
+            Vector3 worldSpaceMoveInput = cameraInput.normalized;
             
             // Rotate the player to face the move direction
             if (worldSpaceMoveInput.sqrMagnitude > 0f)
@@ -350,6 +352,7 @@ namespace FlipFlop.Gameplay
             }
             else // Handle air movement
             {
+                
                 // Add air acceleration
                 characterVelocity += worldSpaceMoveInput * (airAccelerationSpeed * Time.deltaTime);
                 
@@ -457,6 +460,11 @@ namespace FlipFlop.Gameplay
 
             isCrouching = crouch;
             return true;
+        }
+
+        void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            Debug.Log("testsdrdsfds");
         }
     }
 }
